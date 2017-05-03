@@ -242,6 +242,14 @@
 		/**
 		 * @todo
 		 */
+		hideBlock: function () {
+			var current = this._.currentBlock;
+			current.hide();
+		},
+
+		/**
+		 * @todo
+		 */
 		destroy: function() {
 			this.element && this.element.remove();
 		}
