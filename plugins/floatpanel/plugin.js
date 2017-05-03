@@ -483,6 +483,8 @@ CKEDITOR.plugins.add( 'floatpanel', {
 			hide: function( returnFocus ) {
 				if ( this.visible && ( !this.onHide || this.onHide.call( this ) !== true ) ) {
 					this.hideChild();
+					var panel = this._.panel,
+					block = panel.hideBlock();
 					// Blur previously focused element. (#6671)
 					CKEDITOR.env.gecko && this._.iframe.getFrameDocument().$.activeElement.blur();
 					this.element.setStyle( 'display', 'none' );
